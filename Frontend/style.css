@@ -1,0 +1,382 @@
+body {
+  background-color: black;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.square{
+    width :400px;
+    height :400px;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.square span:nth-child(1){
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: radial-gradient(#6b72ff00 50%, #000dff3b 50%);
+   box-shadow: 0 0 50px rgb(25, 25, 255), inset 0 0 50px rgb(25, 25, 255);
+   border-radius: 30% 60% 63% 37%/40% 45% 58% 60%;
+   transition: 0.4s;
+   cursor: pointer;
+   animation: animate1 6s linear infinite;
+}
+.square span:nth-child(2){
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: radial-gradient(#6b72ff00 50%, #000dff3b 50%);
+   box-shadow: 0 0 50px rgb(25, 25, 255), inset 0 0 50px rgb(25, 25, 255);
+   border-radius: 30% 60% 63% 37%/40% 45% 58% 60%;
+   transition: 0.4s;
+   cursor: pointer;
+   animation: animate2 4s linear infinite;
+}
+.square span:nth-child(3){
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: radial-gradient(#6b72ff00 50%, #000dff3b 50%);
+   box-shadow: 0 0 50px rgb(25, 25, 255), inset 0 0 50px rgb(25, 25, 255);
+   border-radius: 30% 60% 63% 37%/40% 45% 58% 60%;
+   transition: 0.4s;
+   cursor: pointer;
+   animation: animate3 8s linear infinite;
+}
+
+
+@keyframes animate1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(270deg);
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+#TextInput {
+    background-color: #181818a8;
+    border-color: blue;
+    box-shadow: 0 0 20px rgb(255, 0, 0),
+      inset 0 0 0px rgb(255, 140, 0);
+    border-radius: 8px;
+    color: white;
+    padding: 3px 0px 3px 20px;
+    margin: 0px 20%;
+  }
+  
+  .input-field {
+    background-color: transparent;
+    border: none;
+    width: 95%;
+    outline: none;
+    color: white;
+    font-family: cursive;
+  }
+  
+  
+  .glow-on-hover {
+    width: 35px;
+    height: 35px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    padding: 0px;
+    margin-left: 10px;
+  }
+  
+  .glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  .glow-on-hover:active {
+    color: #181818a8
+  }
+  
+  .glow-on-hover:active:after {
+    background: transparent;
+  }
+  
+  .glow-on-hover:hover:before {
+    opacity: 1;
+  }
+  
+  .glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+  
+    50% {
+      background-position: 400% 0;
+    }
+  
+    100% {
+      background-position: 0 0;
+    }
+  }
+
+ /* ==================================================
+   JARVIS CHAT SIDEBAR
+   ================================================== */
+
+.jarvis-sidebar {
+    width: 360px !important;
+
+    background: rgba(3, 5, 15, 0.97) !important;
+
+    color: white;
+
+    border-left: 1px solid rgba(0, 110, 255, 0.5);
+
+    box-shadow:
+        -5px 0 25px rgba(0, 70, 255, 0.35),
+        -10px 0 50px rgba(0, 40, 255, 0.2);
+}
+
+
+/* ================================
+   SIDEBAR HEADER
+   ================================ */
+
+.jarvis-sidebar-header {
+    border-bottom: 1px solid rgba(0, 110, 255, 0.35);
+
+    padding: 18px 20px;
+}
+
+
+.jarvis-sidebar-header h5 {
+    color: #00aaff;
+
+    font-size: 22px;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 8px #0088ff,
+        0 0 18px #004cff;
+
+    margin-bottom: 5px;
+}
+
+
+.jarvis-status {
+    color: #777;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+/* ================================
+   ONLINE DOT
+   ================================ */
+
+.status-dot {
+    display: inline-block;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #00ff88;
+
+    margin-right: 5px;
+
+    box-shadow:
+        0 0 6px #00ff88,
+        0 0 12px #00ff88;
+}
+
+
+/* ================================
+   SIDEBAR BODY
+   ================================ */
+
+.jarvis-sidebar-body {
+
+    padding: 18px;
+
+    overflow-y: auto;
+
+    scroll-behavior: smooth;
+}
+
+
+/* ================================
+   CUSTOM SCROLLBAR
+   ================================ */
+
+.jarvis-sidebar-body::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+.jarvis-sidebar-body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+.jarvis-sidebar-body::-webkit-scrollbar-thumb {
+    background: #006eff;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 8px #006eff;
+}
+
+
+.jarvis-sidebar-body::-webkit-scrollbar-thumb:hover {
+    background: #00aaff;
+}
+
+
+/* ================================
+   CHAT MESSAGE
+   ================================ */
+
+.jarvis-chat-message {
+
+    padding: 13px;
+
+    margin-bottom: 15px;
+
+    border-radius: 10px;
+
+    animation: chatMessage 0.3s ease;
+}
+
+
+.message-title {
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 7px;
+}
+
+
+.message-text {
+
+    color: #ddd;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* ================================
+   USER MESSAGE
+   ================================ */
+
+.user-message {
+
+    background: rgba(0, 80, 255, 0.12);
+
+    border-left: 2px solid #006eff;
+}
+
+
+.user-message .message-title {
+
+    color: #008cff;
+}
+
+
+/* ================================
+   JARVIS MESSAGE
+   ================================ */
+
+.jarvis-message {
+
+    background: rgba(0, 190, 255, 0.07);
+
+    border-left: 2px solid #00ccff;
+}
+
+
+.jarvis-message .message-title {
+
+    color: #00ccff;
+}
+
+
+/* ================================
+   MESSAGE ANIMATION
+   ================================ */
+
+@keyframes chatMessage {
+
+    from {
+        opacity: 0;
+        transform: translateX(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
