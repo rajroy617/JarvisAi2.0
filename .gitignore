@@ -1,8 +1,6 @@
 # Ignore the envJarvis directory
-/envjarvis/
 
 contacts.csv
 jarvis.db
 /Backend/__pycache__
 /Backend/cookie.json
-.env
